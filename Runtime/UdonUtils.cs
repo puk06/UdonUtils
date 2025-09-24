@@ -10,6 +10,7 @@ namespace net.puk06.Utils
     /// </summary>
     public class UdonUtils : UdonSharpBehaviour
     {
+        #region VRChat Player Methods
         /// <summary>
         /// Retrieves all players within the instance. Players in the array may be null. Please check using Utilities.IsValid().
         /// </summary>
@@ -52,6 +53,18 @@ namespace net.puk06.Utils
             return player;
         }
 
+        /// <summary>
+        /// You can obtain the LocalPlayer. When acquiring the player, it automatically checks whether the LocalPlayer is an invalid object. If it is invalid, it returns null.
+        /// </summary>
+        /// <returns></returns>
+        public static VRCPlayerApi GetLocalPlayer()
+        {
+            if (!Utilities.IsValid(Networking.LocalPlayer)) return null;
+            return Networking.LocalPlayer;
+        }
+        #endregion
+
+        #region Array Methods
         /// <summary>
         /// You can check whether the passed value is contained in the passed array. If it exists, the index is returned; otherwise, -1 is returned. You cannot check whether both values are null.
         /// </summary>
@@ -116,17 +129,9 @@ namespace net.puk06.Utils
 
             return newArray;
         }
+        #endregion
 
-        /// <summary>
-        /// You can obtain the LocalPlayer. When acquiring the player, it automatically checks whether the LocalPlayer is an invalid object. If it is invalid, it returns null.
-        /// </summary>
-        /// <returns></returns>
-        public static VRCPlayerApi GetLocalPlayer()
-        {
-            if (!Utilities.IsValid(Networking.LocalPlayer)) return null;
-            return Networking.LocalPlayer;
-        }
-
+        #region Comma-Separated String Methods
         /// <summary>
         /// This function can parse comma-separated arrays commonly used for synchronization. For example, “value1,,,value2” will return string values: `Array[0]` holds `value1` and `Array[1]` holds `value2`. To convert to numeric values, use `int.Parse()` and access them via `Array[index]`.
         /// </summary>
@@ -136,8 +141,9 @@ namespace net.puk06.Utils
         {
             return dataString.Split(new string[] { ",,," }, StringSplitOptions.None);
         }
+        #endregion
 
-        #region Math.Clamp()
+        #region UdonSharp Non-Supported Methods
         /// <summary>
         /// It behaves the same as Math.Clamp. If the given value is less than the minimum value, the minimum value is returned; if the given value is greater than the minimum value, the maximum value is returned.
         /// </summary>
@@ -199,6 +205,7 @@ namespace net.puk06.Utils
         }
         #endregion
 
+        #region String Methods
         /// <summary>
         /// Colors the given string using the specified color code. The # symbol is optional.
         /// </summary>
@@ -214,5 +221,6 @@ namespace net.puk06.Utils
 
             return value;
         }
+        #endregion
     }
 }

@@ -1,0 +1,16 @@
+{
+    "name": "net.puk06.udon-utils",
+    "displayName": "UdonUtils",
+    "version": "1.0.0",
+    "vpmDependencies": {
+        "com.vrchat.worlds": ">=3.5.0"
+    },
+    "author": {
+        "name": "Pukorufu",
+        "url": "https://github.com/puk06",
+        "email": "pukorufu@pukosrv.net"
+    },
+    "unity": "2022.3",
+    "description": "This is a collection of commonly used functions in UdonSharp.",
+    "url": "https://github.com/puk06/UdonUtils/releases/download/v1.0.0/net.puk06.udon-utils-v1.0.0.zip?"
+}

@@ -11,6 +11,6 @@
         "email": "pukorufu@pukosrv.net"
     },
     "unity": "2022.3",
-    "description": "This is a collection of commonly used functions in UdonSharp.",
+    "description": "Common Utility Functions for UdonSharp",
     "url": "https://github.com/puk06/UdonUtils/releases/download/v1.0.0/net.puk06.udon-utils-v1.0.0.zip?"
 }

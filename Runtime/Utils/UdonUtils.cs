@@ -218,6 +218,8 @@ namespace net.puk06.Utils
 
             if (colorCode.Length == 6) return $"<color=#{colorCode}>{value}</color>";
             else if (colorCode.Length == 7) return $"<color={colorCode}>{value}</color>";
+            else if (colorCode.Length == 8) return $"<color=#{colorCode}>{value}</color>";
+            else if (colorCode.Length == 9) return $"<color={colorCode}>{value}</color>";
 
             return value;
         }

@@ -2,8 +2,7 @@
     "name": "net.puk06.udon-utils",
     "rootNamespace": "",
     "references": [
-        "UdonSharp.Runtime",
-        "Unity.TextMeshPro"
+        "UdonSharp.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
